@@ -1,0 +1,520 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* A simple reset and font styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A more modern font choice */
+    line-height: 1.6;
+    background-color: #f4f4f4; 
+    color: #333;
+}
+
+/* === NAVBAR STYLING (UNCHANGED from previous step) === */
+.navbar {
+    background: #1a1a1a; 
+    color: #ffffff;      
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    padding: 1rem 2rem;
+
+    position: sticky; 
+    top: 0;           
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.nav-logo {
+    display: flex; 
+    align-items: center;
+    gap: 0.75rem; 
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.nav-logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 2px solid #fff; 
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin-left: 2rem; 
+}
+
+.nav-link {
+    color: #eeeeee; 
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 0.25rem; 
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent; 
+}
+
+.nav-link:hover {
+    color: #00aaff; 
+    border-bottom-color: #00aaff; 
+}
+
+/* === ABOUT ME SECTION STYLING (NEW) === */
+.about-section {
+    padding: 4rem 2rem; /* Top/bottom padding and side padding */
+    background-color: #fefefe; /* White background for the section */
+    min-height: calc(100vh - 80px); /* Adjust based on navbar height for full page effect */
+    display: flex; /* Centers content vertically if needed */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to stack on smaller screens */
+    gap: 3rem; /* Space between the two columns */
+    max-width: 1100px; /* Max width for the content */
+    margin: 0 auto;
+    background-color: #ffffff; /* Inner white background matching your design */
+    padding: 2.5rem;
+    border-radius: 10px; /* Slightly rounded corners for the overall section */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow like in your design */
+}
+
+/* Profile Card (Left Column) */
+.profile-card {
+    flex: 1; /* Allows it to grow */
+    min-width: 280px; /* Minimum width before wrapping */
+    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* No explicit background on the card itself, as it's part of the .about-container */
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the image */
+}
+
+.profile-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+.profile-title {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.2rem; /* Space between social icons */
+}
+
+.social-links a {
+    color: #666; /* Default icon color */
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff; /* Hover color for social icons */
+}
+
+/* About Content (Right Column) */
+.about-content {
+    flex: 2; /* Allows it to take up more space */
+    min-width: 300px; /* Minimum width before wrapping */
+    padding-left: 1.5rem; /* Space from the left column */
+    border-left: 1px solid #eee; /* Separator line like in your design */
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: center; /* Centers content vertically in its column */
+}
+
+/* Remove border on small screens when columns stack */
+@media (max-width: 768px) {
+    .about-content {
+        border-left: none;
+        padding-left: 0;
+        padding-top: 2rem; /* Add padding when stacked */
+        border-top: 1px solid #eee; /* Add a top border instead */
+    }
+    .about-container {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center items when stacked */
+        padding: 2rem;
+    }
+    .profile-card {
+        padding-bottom: 0; /* Adjust padding for stacking */
+    }
+}
+
+.about-hello {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 1.5rem;
+}
+
+.about-intro, .about-text-small {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #007bff; /* A nice highlight color */
+}
+
+.skill-icons {
+    display: flex;
+    flex-wrap: wrap; /* Allows icons to wrap to next line */
+    gap: 1.5rem; /* Space between icons */
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.skill-icon {
+    width: auto; /* Consistent size for skill icons */
+    height: 80px;
+    object-fit: contain; /* Ensures logo is fully visible without cropping */
+    transition: transform 0.2s ease-out;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1);
+}
+
+.about-philosophy {
+    flex-basis: 100%; /* Makes this element take the full width */
+    text-align: center;
+    padding-top: 2.5rem; /* Space above the text */
+    margin-top: 2rem; /* Space from the columns */
+    border-top: 1px solid #eee; /* A subtle separator line */
+    
+    /* Styling for the text itself */
+    font-size: 1.1rem;
+    /* font-style: italic;  <-- REMOVED THIS LINE */
+    color: #444;
+    line-height: 1.7;
+    /* Constrain the width a bit so it's not a super-wide line */
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* On smaller screens, the columns stack. Let's adjust the margin. */
+@media (max-width: 768px) {
+    .about-philosophy {
+        margin-top: 0; /* No extra margin when stacked */
+        padding-top: 2rem;
+    }
+}
+
+/* === MY PROJECTS SECTION STYLING (NEW) === */
+.projects-section {
+    padding: 4rem 2rem;
+    background-color: #f4f4f4; /* Light gray background to separate sections */
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.projects-grid {
+    display: grid;
+    /* This is the "scalable" magic!
+      - auto-fit: Fills the row with as many columns as fit.
+      - minmax(300px, 1fr): Each column will be at least 300px wide,
+        but can grow to be an equal fraction (1fr) of the space.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; /* The space between your project cards */
+}
+
+.project-card {
+    display: block; /* Makes the whole <a> tag a block element */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Keeps the image corners rounded */
+    text-decoration: none; /* Removes underline from the link */
+    color: #333; /* Sets default text color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lifts the card up slightly */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures image covers the space, not stretches */
+    display: block;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.project-role {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.project-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.jams-section {
+    padding: 4rem 2rem;
+    background-color: #222222; /* Dark background for the whole section */
+}
+
+.jams-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.jams-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #eeeeee; /* Light text for the dark background */
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.jams-grid {
+    display: grid;
+    /* Same scalable grid logic */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; 
+}
+
+.jam-card {
+    display: block;
+    background-color: #333333; /* Dark card background */
+    border-radius: 8px; /* Slightly different rounding */
+    border: 2px solid #555; /* A subtle border */
+    overflow: hidden;
+    text-decoration: none;
+    color: #cccccc; /* Default light text for descriptions */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.jam-card:hover {
+    transform: translateY(-5px);
+    border-color: #00aaff; /* Same highlight blue from your navbar */
+}
+
+.jam-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    filter: saturate(85%); /* Slightly desaturated look */
+    transition: filter 0.3s ease;
+}
+
+.jam-card:hover .jam-image {
+    filter: saturate(100%); /* Full color on hover */
+}
+
+.jam-info {
+    padding: 1.5rem;
+}
+
+.jam-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #ffffff; /* Bright white for the title */
+}
+
+.jam-role {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #bbbbbb; /* Lighter gray for the role */
+    margin-bottom: 1rem;
+}
+
+.jam-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    /* Uses the default #cccccc color from .jam-card */
+}
+
+/* === CONTACT ME SECTION STYLING (TIGHTER) === */
+.contact-section {
+    padding: 2.5rem 2rem; /* REDUCED vertical padding */
+    background-color: #ffffff; 
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 2rem; /* REDUCED margin-bottom */
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem; /* REDUCED gap between items */
+    max-width: 500px; 
+    margin: 0 auto; 
+    text-align: left; 
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* REDUCED vertical padding */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- (The rest of the contact styles are unchanged) --- */
+
+/* This styles the <a> links */
+a.contact-item:hover {
+    background-color: #f4f4f4;
+    color: #007bff; /* Highlight color on hover */
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: #555;
+    width: 50px; /* Gives icons a set space */
+    text-align: center;
+    margin-right: 1.5rem; /* Space between icon and text */
+}
+
+/* Specific hover colors for brands */
+a.contact-item:hover i.fa-github { color: #333; }
+a.contact-item:hover i.fa-linkedin-in { color: #0A66C2; }
+a.contact-item:hover i.fa-envelope { color: #0078D4; }
+
+.contact-item span {
+    font-weight: 500;
+}
+
+/* === FOOTER STYLING (NEW) === */
+.footer {
+    background-color: #1a1a1a; /* Matches the dark navbar */
+    color: #aaaaaa;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* === MOBILE MENU STYLING === */
+
+/* Style for the hamburger button itself */
+.nav-toggle {
+    display: none; /* Hidden by default on desktop */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px; /* Space between the lines */
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+/* This is a "media query". It applies styles ONLY
+   if the screen width is 768px or less */
+@media (max-width: 768px) {
+    
+    .nav-toggle {
+        display: flex; /* Show the hamburger button */
+    }
+
+    .nav-menu {
+        display: none; /* Hide the menu links */
+        
+        /* Re-style the menu for mobile */
+        position: absolute;
+        top: 72px; /* Set to your navbar's height */
+        left: 0;
+        width: 100%;
+        background-color: #1a1a1a; /* Match navbar color */
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;
+        padding-bottom: 1rem;
+    }
+
+    .nav-item {
+        margin: 1rem 0; /* Space out the links vertically */
+        width: 100%;
+        text-align: center;
+    }
+
+    /* This class will be added by JavaScript to show the menu */
+    .nav-menu.is-active {
+        display: flex;
+    }
+}

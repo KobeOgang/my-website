@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-Portfolio</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img 
+                  src="Images/profilePic.jpg" 
+                  alt="Portfolio Logo" 
+                  class="nav-logo-img"
+                  onerror="this.src='https://placehold.co/40x40/eee/999?text=ME'"
+                >
+                <span>My Portfolio</span>
+            </a>
+
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu-list">
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">My projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#game-jams" class="nav-link">Game Jam Entries</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact Me</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="profile-card">
+                <img 
+                  src="Images/profilePic.jpg" 
+                  alt="Kobe Ogang" 
+                  class="profile-img"
+                >
+                <h2 class="profile-name">Kobe Ogang</h2>
+                <p class="profile-title">Student Game Developer</p>
+                
+                <div class="social-links">
+                    <a href="https://github.com/KobeOgang" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/kobe-ogang-37bb2b251/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:konOgang@mcm.edu.ph" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <h1 class="about-hello">Hello!</h1>
+                <p class="about-intro">
+                    I'm a 4th-year <span class="highlight">Entertainment and Multimedia Computing</span> student at 
+                    Mapúa Malayan Colleges Mindanao with an unmatched passion for developing games.
+                    I thrive in a fluid role, excelling as both a <span class="highlight">game programmer</span> and a <span class="highlight">game designer/artist</span>.
+                    Below are the software I have experience developing and designing on.
+                </p>
+
+                <div class="skill-icons">
+                    <a href="https://unity.com/"><img src="Images/Unity.png" alt="Unity" class="skill-icon"></a>
+                    <a href="https://www.aseprite.org/"><img src="Images/asepriteLogo.png" alt="Aseprite" class="skill-icon"></a>
+                </div>
+                
+                <p class="about-text-small">
+                    In addition to game development, I also have experience in coding with
+                    the languages below.
+                </p>
+
+                <div class="skill-icons">
+                    <img src="Images/HtmlLogo.png" alt="HTML5" class="skill-icon">
+                    <a href="https://www.javascript.com/"><img src="Images/javaScriptLogo.png" alt="JavaScript" class="skill-icon"></a>
+                    <a href="https://www.aseprite.org/"><img src="Images/cssLogo.png" alt="CSS3" class="skill-icon"></a>
+                    <a href="https://learn.microsoft.com/en-us/dotnet/csharp/"><img src="Images/cSharpLogo.png" alt="C#" class="skill-icon"></a>
+                </div>
+
+                <div class="about-philosophy">
+                    <p>
+                        But it's about more than just the tools. My driving passion is the alchemy of turning a simple thought into a complete, interactive world. 
+                        I'm fascinated by the process of taking an idea from my imagination and forging it 
+                        into a playable reality that others can step into, explore, and connect with.
+                        This ability has allowed me to develop both solo and collaborative games that I am proud of.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="projects-container">
+            <h2 class="projects-title">My Games</h2>
+            
+            <div class="projects-grid">
+
+                <a href="https://github.com/KobeOgang/StaticcShift.git" target="_blank" class="project-card">
+                    <img 
+                      src="Images/StaticShift.png" 
+                      alt="Screenshot of Project 1" 
+                      class="project-image"
+                    >
+                    <div class="project-info">
+                        <h3 class="project-title">Static Shift</h3>
+                        <p class="project-role">Lead Programmer (Ongoing)</p>
+                        <p class="project-desc">
+                            A narrative puzzle game where you wield telekinetic powers. Trapped in a mysterious
+                            and abandoned lab with no memory, you must find your way out using your abilities.
+                            All while discovering your past and the secrets of the lab.
+
+                        </p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/KobeOgang/KleinHein---Game-Networking-Summative.git" target="_blank" class="project-card">
+                    <img 
+                      src="Images/KleinHein.png" 
+                      alt="Screenshot of Project 2" 
+                      class="project-image"
+                    >
+                    <div class="project-info">
+                        <h3 class="project-title">KleinHein</h3>
+                        <p class="project-role">Solo Developer (October 31)</p>
+                        <p class="project-desc">
+                            A top-down arcade shooter multiplayer game, where you fight against other players.
+                            With a leaderboard system, the one with the most eliminations before the timer ends wins.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/KobeOgang/Math-teroids.git" target="_blank" class="project-card">
+                    <img 
+                      src="Images/MathTeroids.png" 
+                      alt="Screenshot of Project 2" 
+                      class="project-image"
+                    >
+                    <div class="project-info">
+                        <h3 class="project-title">Math-Teroids</h3>
+                        <p class="project-role">Solo Developer (July 4)</p>
+                        <p class="project-desc">
+                            An educational arcade game where you defend Earth from incoming asteroids by solving the math problems they carry. 
+                            Correct answers let you launch missiles to destroy them.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/KobeOgang/FearAndMemory-Final-.git" target="_blank" class="project-card">
+                    <img 
+                      src="Images/FearnMemory.png" 
+                      alt="Screenshot of Project 2" 
+                      class="project-image"
+                    >
+                    <div class="project-info">
+                        <h3 class="project-title">Fear and Memory</h3>
+                        <p class="project-role">Lead Programmer (September 28)</p>
+                        <p class="project-desc">
+                            A narrative-heavy horror game set during the time of Martial Law in the Philippines.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/KobeOgang/Graviti.git" target="_blank" class="project-card">
+                    <img 
+                      src="Images/Graviti.png" 
+                      alt="Screenshot of Project 2" 
+                      class="project-image"
+                    >
+                    <div class="project-info">
+                        <h3 class="project-title">Graviti</h3>
+                        <p class="project-role">Solo Developer (March 15)</p>
+                        <p class="project-desc">
+                            A 2D pixel puzzle-platformer where you can manipulate gravity to solve challenges. 
+                            Push boxes, activate buttons, open doors, and use gravity to your advantage. All while avoiding spikes.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/KobeOgang/The-Blacksmith.git" target="_blank" class="project-card">
+                    <img 
+                      src="Images/Blacksmith.png" 
+                      alt="Screenshot of Project 2" 
+                      class="project-image"
+                    >
+                    <div class="project-info">
+                        <h3 class="project-title">The Blacksmith</h3>
+                        <p class="project-role">Programmer (March 9)</p>
+                        <p class="project-desc">
+                            A simulation game where you manage a blacksmith shop. Smelt ores, craft different arrays
+                             of weapons, satisfy your customers, and earn money to buy more resources and upgrades.
+                        </p>
+                    </div>
+                </a>
+                </div>
+        </div>
+    </section>  
+
+    <section id="game-jams" class="jams-section">
+        <div class="jams-container">
+            <h2 class="jams-title">Game Jam Entries</h2>
+            
+            <div class="jams-grid">
+
+                <a href="https://huge-games.itch.io/friggs-grill-n-thrill" target="_blank" class="jam-card">
+                    <img 
+                      src="Images/Frigg's.png" 
+                      alt="Screenshot of Game Jam 1" 
+                      class="jam-image"
+                    >
+                    <div class="jam-info">
+                        <h3 class="jam-title">Frigg's Grill 'N Thrill</h3>
+                        <p class="jam-role">Role: Designer (Sceam Jam 2024)</p>
+                        <p class="jam-desc">
+                            A psychological horror game that disguises itself as a friendly diner simulation.
+                             Serve customers at Frigg's Grill, but try to ignore the growing dread as things start to feel terribly wrong.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="https://huge-games.itch.io/michelle" target="_blank" class="jam-card">
+                    <img 
+                      src="Images/Michelle.png" 
+                      alt="Screenshot of Game Jam 2" 
+                      class="jam-image"
+                    >
+                    <div class="jam-info">
+                        <h3 class="jam-title">Michelle</h3>
+                        <p class="jam-role">Role: Artist, Designer (Scream Secrets 2024)</p>
+                        <p class="jam-desc">
+                            A 2D top-down pixelart horror game that was awarded as one of the Top 10 Finalists in the Scream Secrets 2024.
+                            You play as Michelle, a young victim of a mysterious 'demonic possession' crisis sweeping the town of Davos.
+
+                        </p>
+                    </div>
+                </a>
+
+                </div>
+        </div>
+    </section>
+
+    <section id="game-jams" class="jams-section">
+        </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2 class="contact-title">Get In Touch With Me</h2>
+            <div class="contact-list">
+
+                <a href="https://github.com/KobeOgang" target="_blank" class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>github.com/KobeOgang</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/kobe-ogang-37bb2b251/" target="_blank" class="contact-item">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>linkedin.com/in/kobe-ogang-37bb2b251</span>
+                </a>
+
+                <a href="mailto:konOgang@mcm.edu.ph" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>konOgang@mcm.edu.ph</span>
+                </a>
+
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+63 917 316 3768</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Kobe Ogang. All rights reserved.</p>
+    </footer>
+
+    <script src="JavaScript/script.js"></script>
+</body>
+</html>
